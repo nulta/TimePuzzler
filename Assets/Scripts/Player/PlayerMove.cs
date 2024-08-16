@@ -14,25 +14,19 @@ public class PlayerMove : MonoBehaviour
 
     #endregion
 
-    #region UnityMethod
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        float horizontal = Input.GetAxis("Horizontal");
+        float horizontal = Input.GetAxisRaw("Horizontal");
         if (horizontal != 0)
         {
             Vector3 newPosition = transform.position;
             newPosition.x += horizontal * Time.deltaTime * MovesPerSecond;
             transform.position = newPosition;
         }
+        SendMessage("AnimateMovement", horizontal);
+
+        bool seeFront = (horizontal == 0) && (Input.GetAxisRaw("Vertical") < 0);
+        if (seeFront) { SendMessage("AnimateSeeFront"); }
     }
 
-    #endregion
 }
