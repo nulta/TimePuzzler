@@ -69,6 +69,10 @@ public class InputManager : MonoBehaviour
 
     public void Close()
     {
+        if(errorText.gameObject.active == true)
+        {
+            errorText.gameObject.SetActive(false);
+        }
         gameObject.transform.parent.gameObject.SetActive(false);
     }
 }

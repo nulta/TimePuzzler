@@ -10,6 +10,7 @@ public class TimelineSwitcher : MonoBehaviour
     public GameObject playerFuture;
     public GameObject playerPast;
     public bool isPastActive = false;
+    public bool canSwitch = true;
 
     void Update()
     {
@@ -21,7 +22,7 @@ public class TimelineSwitcher : MonoBehaviour
 
     bool CanSwitch()
     {
-        return true;
+        return canSwitch;
     }
 
     void Switch()
