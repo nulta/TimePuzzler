@@ -61,5 +61,11 @@ public class InputManager : MonoBehaviour
     private void ShowHint()
     {
         Debug.Log("Correct");
+        Close();
+    }
+
+    public void Close()
+    {
+        gameObject.transform.parent.gameObject.SetActive(false);
     }
 }

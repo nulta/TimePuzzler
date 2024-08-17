@@ -43,7 +43,6 @@ public class ObjectInteraction : MonoBehaviour
     {
         if (isPlayerTouching && Input.GetKeyDown(KeyCode.Space))
         {
-            OpenWireGame();
             InteractWithObject();
         }
     }
@@ -51,7 +50,6 @@ public class ObjectInteraction : MonoBehaviour
     /// <summary>
     /// wire connect game
     /// </summary>
-    private void OpenWireGame()
     private void InteractWithObject()
     {
         Debug.Log("Wire Game");
