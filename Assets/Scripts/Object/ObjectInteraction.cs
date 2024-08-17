@@ -12,6 +12,9 @@ public class ObjectInteraction : MonoBehaviour
     float ScaleIncrease = 1.1f;
     bool isPlayerTouching = false;
 
+    [SerializeField]
+    private GameObject GameUI;
+
     #endregion
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -41,6 +44,7 @@ public class ObjectInteraction : MonoBehaviour
         if (isPlayerTouching && Input.GetKeyDown(KeyCode.Space))
         {
             OpenWireGame();
+            InteractWithObject();
         }
     }
 
@@ -48,7 +52,12 @@ public class ObjectInteraction : MonoBehaviour
     /// wire connect game
     /// </summary>
     private void OpenWireGame()
+    private void InteractWithObject()
     {
         Debug.Log("Wire Game");
+        if (GameUI != null)
+        {
+            GameUI.SetActive(true);
+        }
     }
 }
