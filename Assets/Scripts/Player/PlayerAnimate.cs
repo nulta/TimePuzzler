@@ -25,6 +25,7 @@ public class PlayerAnimate : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         animationAtlas ??= Resources.Load<SpriteAtlas>("Assets/Sprites/PlayerAtlas.spriteatlasv2");
+        spriteRenderer.sprite = animationAtlas.GetSprite(currentAnimation);
     }
 
     void Update()
