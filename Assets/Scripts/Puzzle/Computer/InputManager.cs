@@ -17,6 +17,8 @@ public class InputManager : MonoBehaviour
     private Button submitButton;
     [SerializeField]
     private TextMeshProUGUI errorText;
+    [SerializeField]
+    private Image wallPaper;
 
     private string correctDate = "1231";
 
@@ -60,8 +62,9 @@ public class InputManager : MonoBehaviour
 
     private void ShowHint()
     {
-        Debug.Log("Correct");
-        Close();
+        Debug.Log("Correct Answer");
+        gameObject.SetActive(false);
+        wallPaper.gameObject.SetActive(true);
     }
 
     public void Close()
