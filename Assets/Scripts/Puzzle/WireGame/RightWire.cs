@@ -4,15 +4,5 @@ using UnityEngine;
 
 public class RightWire : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    // Don't need to do anything here
 }

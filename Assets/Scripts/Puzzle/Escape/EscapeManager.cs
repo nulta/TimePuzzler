@@ -31,6 +31,14 @@ public class EscapeManager : MonoBehaviour
         }
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Close();
+        }
+    }
+
     private void CheckAnswer()
     {
         for (int i = 0; i < correctAnswers.Length; i++)

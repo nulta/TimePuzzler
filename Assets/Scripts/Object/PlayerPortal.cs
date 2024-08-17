@@ -33,7 +33,7 @@ public class PlayerPortal : MonoBehaviour
 
     void Update()
     {
-        if (player && player.activeInHierarchy && Input.GetKeyDown(KeyCode.Space))
+        if (player && player.activeInHierarchy && Input.GetButtonDown("Action"))
         {
             InteractWithObject(player);
             player = null;

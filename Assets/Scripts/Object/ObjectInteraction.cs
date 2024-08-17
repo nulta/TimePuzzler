@@ -41,7 +41,7 @@ public class ObjectInteraction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isPlayerTouching && Input.GetKeyDown(KeyCode.Space))
+        if (isPlayerTouching && Input.GetButtonDown("Action"))
         {
             InteractWithObject();
         }

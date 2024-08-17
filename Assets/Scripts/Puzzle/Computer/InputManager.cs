@@ -32,6 +32,19 @@ public class InputManager : MonoBehaviour
         errorText.gameObject.SetActive(false);
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            OnSubmit();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Close();
+        }
+    }
+
     private void OnSubmit()
     {
         string input = inputField.text;
@@ -69,7 +82,7 @@ public class InputManager : MonoBehaviour
 
     public void Close()
     {
-        if(errorText.gameObject.active == true)
+        if (errorText.gameObject.activeInHierarchy)
         {
             errorText.gameObject.SetActive(false);
         }

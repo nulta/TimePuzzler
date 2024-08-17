@@ -36,7 +36,7 @@ public class FixWiringTask : MonoBehaviour
         }
     }
 
-    private void Start()
+    private void Awake()
     {
         mIsConnected = new bool[mLeftWires.Count];
         mConnections = new int[mLeftWires.Count];
@@ -45,6 +45,11 @@ public class FixWiringTask : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Close();
+        }
+
         if (Input.GetMouseButtonDown(0))
         {
             RaycastHit2D hit = Physics2D.Raycast(Input.mousePosition, Vector2.right, 1f);
