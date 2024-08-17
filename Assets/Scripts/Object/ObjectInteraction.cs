@@ -52,7 +52,6 @@ public class ObjectInteraction : MonoBehaviour
     /// </summary>
     private void InteractWithObject()
     {
-        Debug.Log("Wire Game");
         if (GameUI != null)
         {
             GameUI.SetActive(true);
