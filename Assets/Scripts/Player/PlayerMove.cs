@@ -16,6 +16,8 @@ public class PlayerMove : MonoBehaviour
 
     Rigidbody2D rb;
 
+    public bool canMove = true;
+
     #endregion
 
     void Start()
@@ -25,12 +27,15 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        moveVel = horizontal * MovesPerSecond;
-        SendMessage("AnimateMovement", horizontal);
+        if (canMove)
+        {
+            float horizontal = Input.GetAxisRaw("Horizontal");
+            moveVel = horizontal * MovesPerSecond;
+            SendMessage("AnimateMovement", horizontal);
 
-        bool seeFront = (horizontal == 0) && (Input.GetAxisRaw("Vertical") < 0);
-        if (seeFront) { SendMessage("AnimateSeeFront"); }
+            bool seeFront = (horizontal == 0) && (Input.GetAxisRaw("Vertical") < 0);
+            if (seeFront) { SendMessage("AnimateSeeFront"); }
+        }
     }
 
     void FixedUpdate()
