@@ -28,7 +28,7 @@ public class FixWiringTask : MonoBehaviour
 
     private void OnEnable()
     {
-        for(int i = 0; i < mLeftWires.Count;i++)
+        for (int i = 0; i < mLeftWires.Count; i++)
         {
             mLeftWires[i].ResetTarget();
             mIsConnected[i] = false;
@@ -93,7 +93,7 @@ public class FixWiringTask : MonoBehaviour
     private void CheckConnection(LeftWire leftWire, int rightWireIndex)
     {
         int leftIndex = mLeftWires.IndexOf(leftWire);
-        Debug.Log($"왼쪽 전선 {leftIndex}가 오른쪽 전선에 연결되었습니다.");
+        Debug.Log($"Left Wire {leftIndex} Connected.");
         mIsConnected[leftIndex] = true;
         mConnections[leftIndex] = rightWireIndex;
         CheckAllConnections();
@@ -114,23 +114,23 @@ public class FixWiringTask : MonoBehaviour
 
         if (allConnected)
         {
-            Debug.Log("모든 전선 연결. 최종 확인");
+            Debug.Log("All Wire Connected");
             PerformFinalCheck();
         }
     }
 
     private void PerformFinalCheck()
     {
-        for (int i = 0; i < mLeftWires.Count;i++)
+        for (int i = 0; i < mLeftWires.Count; i++)
         {
             if (mCorrectConnections[i] != mConnections[i])
             {
-                Debug.Log($"왼쪽 전선 {i}가 올바르게 연결되지 않았습니다.");
+                Debug.Log($"Left wire {i} not correctly connected.");
                 Close();
                 return;
             }
         }
-        Debug.Log("모든 전선이 올바르게 연결되었습니다.");
+        Debug.Log("All Wire correctly connected.");
         Close();
     }
 

@@ -52,7 +52,7 @@ public class ObjectInteraction : MonoBehaviour
     /// </summary>
     private void InteractWithObject()
     {
-        if(GameUI != null)
+        if (GameUI != null)
         {
             GameUI.SetActive(true);
         }

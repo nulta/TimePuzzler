@@ -39,7 +39,7 @@ public class InputManager : MonoBehaviour
             ShowHint();
         }
         else
-        { 
+        {
             inputField.text = string.Empty;
             ShowError();
         }
@@ -60,6 +60,6 @@ public class InputManager : MonoBehaviour
 
     private void ShowHint()
     {
-        Debug.Log("정답 입력");
+        Debug.Log("Correct");
     }
 }
