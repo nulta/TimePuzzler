@@ -15,6 +15,9 @@ public class DrawerInteraction : MonoBehaviour
     [SerializeField]
     private GameObject GameUI;
 
+    [SerializeField]
+    private GameObject notOpenUi;
+
     private TimelineSwitcher timelineSwitcher;
     private PlayerInteract playerInteract;
 
@@ -61,7 +64,7 @@ public class DrawerInteraction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isPlayerTouching && Input.GetButtonDown("Action") && playerHasKey)
+        if (isPlayerTouching && Input.GetButtonDown("Action"))
         {
             InteractWithObject();
         }
@@ -72,11 +75,18 @@ public class DrawerInteraction : MonoBehaviour
     /// </summary>
     private void InteractWithObject()
     {
-        if (GameUI != null)
-        {
-            GameUI.SetActive(true);
+        if (playerHasKey) {
+            if (GameUI != null)
+            {
+                GameUI.SetActive(true);
 
-            StartCoroutine(HideUI(2f));
+                StartCoroutine(HideUI(2f));
+            }
+        } else {
+            if (notOpenUi != null)
+            {
+                notOpenUi.SetActive(true);
+            }
         }
     }
 
