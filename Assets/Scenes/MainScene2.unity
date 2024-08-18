@@ -2265,7 +2265,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &214173082
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3836,6 +3836,7 @@ MonoBehaviour:
   escapeButton: {fileID: 97962846}
   errorText: {fileID: 193675156}
   openFuturePortal: {fileID: 945767292}
+  openPastPortal: {fileID: 1461384730}
   escapeObject: {fileID: 243605885}
 --- !u!114 &371858284
 MonoBehaviour:
@@ -13372,7 +13373,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1325139688
 RectTransform:
   m_ObjectHideFlags: 0

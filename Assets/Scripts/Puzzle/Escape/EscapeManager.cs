@@ -23,6 +23,8 @@ public class EscapeManager : MonoBehaviour
     [SerializeField]
     private GameObject openFuturePortal;
     [SerializeField]
+    private GameObject openPastPortal;
+    [SerializeField]
     private GameObject escapeObject;
 
     #endregion
@@ -60,9 +62,10 @@ public class EscapeManager : MonoBehaviour
     private void EscapeSuccess()
     {
         Debug.Log("Escape Successly");
-        if (openFuturePortal != null)
+        if (openFuturePortal != null && openPastPortal != null)
         {
             openFuturePortal.SetActive(true);
+            openPastPortal.SetActive(true);
         }
         if (escapeObject != null)
         {
