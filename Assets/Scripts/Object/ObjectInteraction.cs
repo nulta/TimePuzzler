@@ -9,7 +9,7 @@ public class ObjectInteraction : MonoBehaviour
 {
     #region Fields
 
-    float ScaleIncrease = 1.1f;
+    float ScaleIncrease = 1.01f;
     bool isPlayerTouching = false;
 
     [SerializeField]
@@ -21,10 +21,7 @@ public class ObjectInteraction : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            Vector3 newScale = transform.localScale;
-            newScale.x *= ScaleIncrease;
-            newScale.y *= ScaleIncrease;
-            transform.localScale = newScale;
+            transform.localScale = Vector3.one * ScaleIncrease;
             isPlayerTouching = true;
         }
     }
