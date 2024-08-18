@@ -18,8 +18,7 @@ public class CameraController : MonoBehaviour
 
     void Start()
     {
-        previousPosition = GetDesiredPosition();
-        nextPosition = previousPosition;
+        ResetCameraTracking();
     }
 
     void Update()
@@ -69,5 +68,11 @@ public class CameraController : MonoBehaviour
     Vector2 GetTargetPosition()
     {
         return focusTarget?.transform.position ?? Vector2.zero;
+    }
+
+    public void ResetCameraTracking()
+    {
+        previousPosition = GetDesiredPosition();
+        nextPosition = previousPosition;
     }
 }

@@ -78,4 +78,14 @@ public class PlayerAnimate : MonoBehaviour
         direction = Direction.Front;
         animationTimer = 0.0f;
     }
+
+    public void AnimateSetDirection(int direction) {
+        Debug.Assert(direction == -1 || direction == 0 || direction == 1);
+        this.direction = (Direction)direction;
+        animationTimer = 0.0f;
+    }
+
+    public int GetDirection() {
+        return (int)direction;
+    }
 }
