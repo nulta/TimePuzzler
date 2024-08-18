@@ -8,6 +8,8 @@ public class CameraLandmarkFadeOut : MonoBehaviour
     CameraLandmark landmark;
     float initialWeight;
     float time = 0;
+    [SerializeField]
+    private GameObject tutorialUI;
 
     void OnEnable()
     {
@@ -22,6 +24,10 @@ public class CameraLandmarkFadeOut : MonoBehaviour
         landmark.weight = Mathf.Lerp(initialWeight, 0, time / duration);
         if (time >= duration)
         {
+            if (tutorialUI != null)
+            {
+                tutorialUI.SetActive(true);
+            }
             gameObject.SetActive(false);
         }
     }
