@@ -79,8 +79,6 @@ public class DrawerInteraction : MonoBehaviour
             if (GameUI != null)
             {
                 GameUI.SetActive(true);
-
-                StartCoroutine(HideUI(2f));
             }
         } else {
             if (notOpenUi != null)
@@ -88,11 +86,5 @@ public class DrawerInteraction : MonoBehaviour
                 notOpenUi.SetActive(true);
             }
         }
-    }
-
-    private IEnumerator HideUI(float delay)
-    {
-        yield return new WaitForSeconds(delay);
-        GameUI.SetActive(false);
     }
 }

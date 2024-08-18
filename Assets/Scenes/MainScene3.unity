@@ -4973,6 +4973,7 @@ MonoBehaviour:
   screenFader: {fileID: 167881579}
   messageBoxHolder: {fileID: 2040025808}
   messageBoxPrefab: {fileID: 8092966211387520193, guid: f61d07c99e68fbb4ebe90373cf950a25, type: 3}
+  titleScene: {fileID: 0}
 --- !u!4 &315818299
 Transform:
   m_ObjectHideFlags: 0
@@ -13462,6 +13463,8 @@ MonoBehaviour:
   openPastPortal: {fileID: 260861468}
   switchObject: {fileID: 980559079}
   keyObject: {fileID: 0}
+  messageBoxHolder: {fileID: 2040025808}
+  messageBoxPrefab: {fileID: 8092966211387520193, guid: f61d07c99e68fbb4ebe90373cf950a25, type: 3}
 --- !u!114 &1169446703
 MonoBehaviour:
   m_ObjectHideFlags: 0
