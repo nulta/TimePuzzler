@@ -5,7 +5,7 @@ using UnityEngine;
 public class WarningMessage : MonoBehaviour
 {
     [SerializeField]
-    private int delaySeconds;
+    private float delaySeconds;
 
     private void OnEnable()
     {
