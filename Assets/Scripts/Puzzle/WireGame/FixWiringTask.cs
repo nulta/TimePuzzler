@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 /// <summary>
@@ -11,18 +12,17 @@ public class FixWiringTask : MonoBehaviour
 
     [SerializeField]
     private List<LeftWire> mLeftWires;
-
     [SerializeField]
     private List<RightWire> mRightWires;
-
     [SerializeField]
     private List<int> mCorrectConnections;
-
+    [SerializeField]
+    private GameObject errorText;
+    
     private LeftWire mSelectedWire;
-
     private bool[] mIsConnected;
-
     private int[] mConnections;
+
 
     [SerializeField]
     private GameObject openFuturePortal;
@@ -138,6 +138,10 @@ public class FixWiringTask : MonoBehaviour
             if (mCorrectConnections[i] != mConnections[i])
             {
                 Debug.Log($"Left wire {i} not correctly connected.");
+                if (errorText != null)
+                {
+                    errorText.SetActive(true);
+                }
                 Close();
                 return;
             }

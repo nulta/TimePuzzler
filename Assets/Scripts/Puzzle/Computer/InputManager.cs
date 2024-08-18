@@ -16,7 +16,7 @@ public class InputManager : MonoBehaviour
     [SerializeField]
     private Button submitButton;
     [SerializeField]
-    private TextMeshProUGUI errorText;
+    private GameObject errorText;
     [SerializeField]
     private Image wallPaper;
 
@@ -63,14 +63,10 @@ public class InputManager : MonoBehaviour
 
     private void ShowError()
     {
-        errorText.gameObject.SetActive(true);
-        StartCoroutine(HideError(2f));
-    }
-
-    private IEnumerator HideError(float delay)
-    {
-        yield return new WaitForSeconds(delay);
-        errorText.gameObject.SetActive(false);
+        if (errorText != null)
+        {
+            errorText.SetActive(true);
+        }
     }
 
     private void ShowHint()

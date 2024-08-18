@@ -16,7 +16,7 @@ public class EscapeManager : MonoBehaviour
     [SerializeField]
     private Button escapeButton;
     [SerializeField]
-    private TextMeshProUGUI errorText;
+    private GameObject errorText;
 
     private int[] correctAnswers = { 1, 2, 3 };
 
@@ -74,16 +74,19 @@ public class EscapeManager : MonoBehaviour
 
     private void ShowError()
     {
-        errorText.gameObject.SetActive(true);
-        StartCoroutine(HideError(2f));
-    }
-
-    private IEnumerator HideError(float delay)
-    {
-        yield return new WaitForSeconds(delay);
-        errorText.gameObject.SetActive(false);
+        if (errorText != null)
+        {
+            errorText.SetActive(true);
+        }
         Close();
     }
+
+    //private IEnumerator HideError(float delay)
+    //{
+    //    yield return new WaitForSeconds(delay);
+    //    errorText.gameObject.SetActive(false);
+    //    Close();
+    //}
 
     public void Close()
     {
