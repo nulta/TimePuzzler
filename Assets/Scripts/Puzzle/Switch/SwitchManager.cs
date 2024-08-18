@@ -22,6 +22,8 @@ public class SwitchManager : MonoBehaviour
     private GameObject openPastPortal;
     [SerializeField]
     private GameObject switchObject;
+    [SerializeField]
+    private GameObject keyObject;
 
     #endregion
 
@@ -91,6 +93,10 @@ public class SwitchManager : MonoBehaviour
         if(switchObject != null) 
         {
             switchObject.SetActive(false);
+        }
+        if(keyObject != null)
+        {
+            keyObject.SetActive(true);
         }
 
         Close();

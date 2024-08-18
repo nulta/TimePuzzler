@@ -25,6 +25,15 @@ public class InputManager : MonoBehaviour
 
     #endregion
 
+    private void OnEnable()
+    {
+        if (inputField != null)
+        {
+            inputField.Select();
+            inputField.ActivateInputField();
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
