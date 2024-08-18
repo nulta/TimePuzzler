@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class WarningMessage : MonoBehaviour
 {
+    [SerializeField]
+    private int delaySeconds;
+
     private void OnEnable()
     {
-        StartCoroutine(HideUI(2f));
+        StartCoroutine(HideUI(delaySeconds));
     }
 
     private IEnumerator HideUI(float delay)
