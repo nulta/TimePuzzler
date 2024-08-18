@@ -103,8 +103,6 @@ public class TimelineSwitcher : MonoBehaviour
     {
         var x = player.transform.position.x;
         var zone = (x + 10) / 30;
-        Debug.Log(player);
-        Debug.Log(zone);
         return (int) zone;
     }
 }

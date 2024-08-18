@@ -179,7 +179,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uAC8C\uC784 \uC774\uB984"
+  m_text: "\uC2DC\uAC04\uC758 \uACBD\uACC4"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6de5f2a9d0b12e74e90adc55badf84d5, type: 2}
   m_sharedMaterial: {fileID: -394053399024302067, guid: 6de5f2a9d0b12e74e90adc55badf84d5, type: 2}
@@ -549,7 +549,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d63ca12fc4bf1f64ea7af47900913f91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: MainScene
+  sceneName: MainScene3
 --- !u!1 &659817425
 GameObject:
   m_ObjectHideFlags: 0

@@ -30,6 +30,9 @@ public class SwitchManager : MonoBehaviour
     readonly Color offColor = new Color(0.19f, 0.58f, 0.19f, 1f);
     readonly Color onColor = new Color(1f, 0.22f, 0.36f, 1f);
 
+    public GameObject messageBoxHolder;
+    public GameObject messageBoxPrefab;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -102,11 +105,24 @@ public class SwitchManager : MonoBehaviour
             keyObject.SetActive(true);
         }
 
+        ShowText("\"앗, 문을 또 고장내버렸다..\"");
+
         Close();
     }
 
     public void Close()
     {
         gameObject.transform.parent.gameObject.SetActive(false);
+    }
+
+    void ShowText(string text)
+    {
+        if (messageBoxHolder == null)
+        {
+            return;
+        }
+        var messageBox = Instantiate(messageBoxPrefab, messageBoxHolder.transform);
+        messageBox.GetComponent<MessageBox>().content = text;
+        messageBox.transform.SetAsFirstSibling();
     }
 }

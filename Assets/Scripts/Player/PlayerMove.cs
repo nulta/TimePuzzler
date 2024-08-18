@@ -47,4 +47,8 @@ public class PlayerMove : MonoBehaviour
         rb.MovePosition(rb.position + posDelta);
     }
 
+    public void SetXPosition(float x)
+    {
+        transform.position = new Vector3(x, transform.position.y, transform.position.z);
+    }
 }
