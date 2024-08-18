@@ -18,7 +18,7 @@ public class EscapeManager : MonoBehaviour
     [SerializeField]
     private GameObject errorText;
 
-    private int[] correctAnswers = { 1, 2, 3 };
+    private int[] correctAnswers = { 7, 4, 3 };
 
     [SerializeField]
     private GameObject openFuturePortal;
