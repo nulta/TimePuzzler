@@ -34,6 +34,7 @@ public class UiFader : MonoBehaviour
             }
         }
 
+        canvasGroup.alpha = 1.0f;
         yield return new WaitForSeconds(delayDuration);
 
         if (fadeOutDuration > 0)

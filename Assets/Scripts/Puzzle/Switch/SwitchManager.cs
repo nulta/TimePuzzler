@@ -64,7 +64,7 @@ public class SwitchManager : MonoBehaviour
         Image buttonImage = button.GetComponent<Image>();
         if (buttonImage != null)
         {
-            buttonImage.color = state == 0 ? Color.green : Color.red;
+            buttonImage.color = state == 0 ? offColor : onColor;
         }
     }
 
