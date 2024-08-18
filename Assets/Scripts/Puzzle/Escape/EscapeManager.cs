@@ -20,6 +20,11 @@ public class EscapeManager : MonoBehaviour
 
     private int[] correctAnswers = { 1, 2, 3 };
 
+    [SerializeField]
+    private GameObject openFuturePortal;
+    [SerializeField]
+    private GameObject escapeObject;
+
     #endregion
 
     // Start is called before the first frame update
@@ -49,9 +54,24 @@ public class EscapeManager : MonoBehaviour
                 return;
             }
         }
+        EscapeSuccess();
+    }
+
+    private void EscapeSuccess()
+    {
         Debug.Log("Escape Successly");
+        if (openFuturePortal != null)
+        {
+            openFuturePortal.SetActive(true);
+        }
+        if (escapeObject != null)
+        {
+            escapeObject.SetActive(false);
+        }
+
         Close();
     }
+
     private void ShowError()
     {
         errorText.gameObject.SetActive(true);

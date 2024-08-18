@@ -16,6 +16,13 @@ public class SwitchManager : MonoBehaviour
     private int[] correctAnswers = { 1, 0, 1, 0, 1, 0, 1, 0 };
     private int[] playerAnswers;
 
+    [SerializeField]
+    private GameObject openFuturePortal;
+    [SerializeField]
+    private GameObject openPastPortal;
+    [SerializeField]
+    private GameObject switchObject;
+
     #endregion
 
     // Start is called before the first frame update
@@ -76,6 +83,16 @@ public class SwitchManager : MonoBehaviour
     private void ShowSuccessMessage()
     {
         Debug.Log("Success");
+        if(openFuturePortal != null && openPastPortal != null) 
+        {
+            openFuturePortal.SetActive(true);
+            openPastPortal.SetActive(true);
+        }
+        if(switchObject != null) 
+        {
+            switchObject.SetActive(false);
+        }
+
         Close();
     }
 

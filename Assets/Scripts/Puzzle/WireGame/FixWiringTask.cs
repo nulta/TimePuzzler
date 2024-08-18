@@ -24,6 +24,13 @@ public class FixWiringTask : MonoBehaviour
 
     private int[] mConnections;
 
+    [SerializeField]
+    private GameObject openFuturePortal;
+    [SerializeField]
+    private GameObject openPastPortal;
+    [SerializeField]
+    private GameObject wireGameObject;
+
     #endregion
 
     private void OnEnable()
@@ -135,7 +142,21 @@ public class FixWiringTask : MonoBehaviour
                 return;
             }
         }
+        CorrectlyConnected();
+    }
+
+    private void CorrectlyConnected()
+    {
         Debug.Log("All Wire correctly connected.");
+        if (openFuturePortal != null && openPastPortal != null)
+        {
+            openFuturePortal.SetActive(true);
+            openPastPortal.SetActive(true);
+        }
+        if (wireGameObject != null)
+        {
+            wireGameObject.SetActive(false);
+        }
         Close();
     }
 

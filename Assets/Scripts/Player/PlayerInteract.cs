@@ -12,16 +12,4 @@ public class PlayerInteract : MonoBehaviour
     public bool hasKey = false;
 
     #endregion
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

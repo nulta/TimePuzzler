@@ -364,7 +364,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &94242101
 Transform:
   m_ObjectHideFlags: 0
@@ -2670,7 +2670,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &260861469
 Transform:
   m_ObjectHideFlags: 0
@@ -3357,6 +3357,8 @@ MonoBehaviour:
   - {fileID: 1615849877}
   escapeButton: {fileID: 97962846}
   errorText: {fileID: 193675158}
+  openFuturePortal: {fileID: 945767292}
+  escapeObject: {fileID: 243605885}
 --- !u!114 &371858284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6794,7 +6796,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &945767293
 Transform:
   m_ObjectHideFlags: 0
@@ -7629,6 +7631,9 @@ MonoBehaviour:
   - {fileID: 105287062}
   - {fileID: 848342289}
   mCorrectConnections: 01000000030000000200000000000000
+  openFuturePortal: {fileID: 1195656347}
+  openPastPortal: {fileID: 94242100}
+  wireGameObject: {fileID: 1037160533}
 --- !u!114 &1002881704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9029,6 +9034,9 @@ MonoBehaviour:
   - {fileID: 1507039500}
   - {fileID: 450466696}
   - {fileID: 386381867}
+  openFuturePortal: {fileID: 1222593109}
+  openPastPortal: {fileID: 260861468}
+  switchObject: {fileID: 980559079}
 --- !u!114 &1169446703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9251,7 +9259,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1195656348
 Transform:
   m_ObjectHideFlags: 0
@@ -10350,7 +10358,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1222593110
 Transform:
   m_ObjectHideFlags: 0
@@ -12239,7 +12247,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1461384731
 Transform:
   m_ObjectHideFlags: 0
@@ -14672,6 +14680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab793101d531011498c90c1d5f690e32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  keyObject: {fileID: 817192751}
 --- !u!114 &1781852900
 MonoBehaviour:
   m_ObjectHideFlags: 0

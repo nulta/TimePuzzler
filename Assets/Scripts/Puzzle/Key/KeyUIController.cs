@@ -11,6 +11,9 @@ public class KeyUIController : MonoBehaviour
     private TimelineSwitcher timelineSwitcher;
     private PlayerInteract playerInteract;
 
+    [SerializeField]
+    private GameObject keyObject;
+
     private void OnEnable()
     {
         timelineSwitcher = FindAnyObjectByType<TimelineSwitcher>();
@@ -23,6 +26,10 @@ public class KeyUIController : MonoBehaviour
             {
                 playerInteract.hasKey = true;
                 Debug.Log("Player get Key");
+                if (keyObject != null)
+                {
+                    keyObject.SetActive(false);
+                }
             }
             else
             {
