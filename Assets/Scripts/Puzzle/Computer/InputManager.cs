@@ -19,8 +19,11 @@ public class InputManager : MonoBehaviour
     private GameObject errorText;
     [SerializeField]
     private Image wallPaper;
+    [SerializeField]
+    private GameObject hintObject;
 
-    private string correctDate = "1231";
+    string correctDate = "0413";
+    int wrongCount = 0;
 
 
     #endregion
@@ -60,7 +63,7 @@ public class InputManager : MonoBehaviour
 
         if (input == correctDate)
         {
-            ShowHint();
+            ShowDesktop();
         }
         else
         {
@@ -76,9 +79,15 @@ public class InputManager : MonoBehaviour
         {
             errorText.SetActive(true);
         }
+
+        wrongCount++;
+        if (wrongCount >= 3)
+        {
+            hintObject.SetActive(true);
+        }
     }
 
-    private void ShowHint()
+    private void ShowDesktop()
     {
         Debug.Log("Correct Answer");
         gameObject.SetActive(false);

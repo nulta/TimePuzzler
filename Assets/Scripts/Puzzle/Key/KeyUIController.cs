@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -36,14 +37,6 @@ public class KeyUIController : MonoBehaviour
                 Debug.Log("Player's Key Error");
             }
         }
-
-        StartCoroutine(HideUI(2f));
-    }
-
-    private IEnumerator HideUI(float delay)
-    {
-        yield return new WaitForSeconds(delay);
-        gameObject.SetActive(false);
     }
 
 }

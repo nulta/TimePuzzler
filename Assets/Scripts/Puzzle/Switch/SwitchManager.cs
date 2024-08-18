@@ -27,6 +27,9 @@ public class SwitchManager : MonoBehaviour
 
     #endregion
 
+    readonly Color offColor = new Color(0.19f, 0.58f, 0.19f, 1f);
+    readonly Color onColor = new Color(1f, 0.22f, 0.36f, 1f);
+
     // Start is called before the first frame update
     void Start()
     {
