@@ -11,20 +11,11 @@ public class LeftWire : MonoBehaviour
     [SerializeField]
     private RectTransform mWireBody;
 
-    private LeftWire mSelectedWire;
-
     private Canvas mGameCanvas;
 
-    // Start is called before the first frame update
     void Start()
     {
         mGameCanvas = FindObjectOfType<Canvas>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     public void SetTarget(Vector3 targetPosition, float offset)

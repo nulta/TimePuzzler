@@ -2,18 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ControllPlayer : MonoBehaviour
+public class BlockMovementWhileActive : MonoBehaviour
 {
     // if puzzle enabled, restricted
-    [SerializeField]
     private PlayerMove playerMove1;
-    [SerializeField]
     private PlayerMove playerMove2;
-    [SerializeField]
     private TimelineSwitcher timelineSwitcher;
 
     private void OnEnable()
     {
+        timelineSwitcher = FindAnyObjectByType<TimelineSwitcher>();
+        playerMove1 = timelineSwitcher.playerFuture.GetComponent<PlayerMove>();
+        playerMove2 = timelineSwitcher.playerPast.GetComponent<PlayerMove>();
+
         playerMove1.canMove = false;
         playerMove2.canMove = false;
         timelineSwitcher.canSwitch = false;

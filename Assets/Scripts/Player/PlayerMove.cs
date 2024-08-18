@@ -27,15 +27,18 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
-        if (canMove)
-        {
-            float horizontal = Input.GetAxisRaw("Horizontal");
-            moveVel = horizontal * MovesPerSecond;
-            SendMessage("AnimateMovement", horizontal);
-
-            bool seeFront = (horizontal == 0) && (Input.GetAxisRaw("Vertical") < 0);
-            if (seeFront) { SendMessage("AnimateSeeFront"); }
+        if (!canMove) {
+            moveVel = 0;
+            SendMessage("AnimateMovement", (object) 0.0f);
+            return;
         }
+
+        float horizontal = Input.GetAxisRaw("Horizontal");
+        moveVel = horizontal * MovesPerSecond;
+        SendMessage("AnimateMovement", horizontal);
+
+        bool seeFront = (horizontal == 0) && (Input.GetAxisRaw("Vertical") < 0);
+        if (seeFront) { SendMessage("AnimateSeeFront"); }
     }
 
     void FixedUpdate()

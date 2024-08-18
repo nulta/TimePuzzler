@@ -31,6 +31,14 @@ public class SwitchManager : MonoBehaviour
         }
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Close();
+        }
+    }
+
     // when button clicked
     private void ToggleSwitch(int index)
     {
