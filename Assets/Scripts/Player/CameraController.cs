@@ -13,9 +13,14 @@ public class CameraController : MonoBehaviour
     public Vector2 offset = new Vector2(0, 0);
 
     // For interpolation
-    Vector2 previousPosition = Vector2.zero;
-    Vector2 nextPosition = Vector2.zero;
+    Vector2 previousPosition;
+    Vector2 nextPosition;
 
+    void Start()
+    {
+        previousPosition = GetDesiredPosition();
+        nextPosition = previousPosition;
+    }
 
     void Update()
     {
