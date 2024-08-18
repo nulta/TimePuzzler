@@ -23,6 +23,14 @@ public class ImageZoom : MonoBehaviour
         originalScale = targetImage.transform.localScale;
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Close();
+        }
+    }
+
     public void OnImageClick()
     {
         if (!isZoomed)
@@ -35,5 +43,10 @@ public class ImageZoom : MonoBehaviour
             targetImage.transform.localScale = originalScale;
             isZoomed = false;
         }
+    }
+
+    public void Close()
+    {
+        gameObject.transform.parent.gameObject.SetActive(false);
     }
 }

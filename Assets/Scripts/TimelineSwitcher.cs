@@ -11,6 +11,10 @@ public class TimelineSwitcher : MonoBehaviour
     public GameObject playerPast;
     public bool isPastActive = false;
     public bool canSwitch = true;
+    [SerializeField]
+    private GameObject goToPastText;
+    [SerializeField]
+    private GameObject goToFutureText;
 
     void Update()
     {
@@ -30,5 +34,13 @@ public class TimelineSwitcher : MonoBehaviour
         isPastActive = !isPastActive;
         playerFuture.SetActive(!isPastActive);
         playerPast.SetActive(isPastActive);
+        if (isPastActive && goToPastText != null)
+        {
+            goToPastText.SetActive(true);
+        }
+        else if (!isPastActive && goToFutureText != null) 
+        {
+            goToFutureText.SetActive(true);
+        }
     }
 }
