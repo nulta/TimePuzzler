@@ -1233,6 +1233,7 @@ GameObject:
   - component: {fileID: 195086171}
   - component: {fileID: 195086173}
   - component: {fileID: 195086172}
+  - component: {fileID: 195086174}
   m_Layer: 5
   m_Name: ComputerUI
   m_TagString: Untagged
@@ -1300,6 +1301,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 195086170}
   m_CullTransparentMesh: 1
+--- !u!114 &195086174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 195086170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cb97f10684ff6245a245ba9de6b6d84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerMove1: {fileID: 1213441397}
+  playerMove2: {fileID: 1222288356}
+  timelineSwitcher: {fileID: 1468658239}
 --- !u!1 &203504860
 GameObject:
   m_ObjectHideFlags: 0
@@ -2688,6 +2704,7 @@ GameObject:
   - component: {fileID: 363692959}
   - component: {fileID: 363692961}
   - component: {fileID: 363692960}
+  - component: {fileID: 363692962}
   m_Layer: 5
   m_Name: EscapeUI
   m_TagString: Untagged
@@ -2753,6 +2770,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 363692958}
   m_CullTransparentMesh: 1
+--- !u!114 &363692962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 363692958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cb97f10684ff6245a245ba9de6b6d84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerMove1: {fileID: 1213441397}
+  playerMove2: {fileID: 1222288356}
+  timelineSwitcher: {fileID: 1468658239}
 --- !u!1 &371858281
 GameObject:
   m_ObjectHideFlags: 0
@@ -6351,8 +6383,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cb97f10684ff6245a245ba9de6b6d84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerMove: {fileID: 0}
-  timelineSwitcher: {fileID: 0}
+  playerMove1: {fileID: 1213441397}
+  playerMove2: {fileID: 1222288356}
+  timelineSwitcher: {fileID: 1468658239}
 --- !u!1 &1002881701
 GameObject:
   m_ObjectHideFlags: 0
@@ -6422,8 +6455,6 @@ MonoBehaviour:
   - {fileID: 2045929125}
   - {fileID: 1244480245}
   mCorrectConnections: 01000000020000000300000004000000
-  playerMove: {fileID: 0}
-  timelineSwitcher: {fileID: 0}
 --- !u!114 &1002881704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10614,6 +10645,7 @@ GameObject:
   - component: {fileID: 1525058848}
   - component: {fileID: 1525058850}
   - component: {fileID: 1525058849}
+  - component: {fileID: 1525058851}
   m_Layer: 5
   m_Name: WireGameUI
   m_TagString: Untagged
@@ -10680,6 +10712,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1525058847}
   m_CullTransparentMesh: 1
+--- !u!114 &1525058851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525058847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cb97f10684ff6245a245ba9de6b6d84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerMove1: {fileID: 1213441397}
+  playerMove2: {fileID: 1222288356}
+  timelineSwitcher: {fileID: 1468658239}
 --- !u!1 &1557316359
 GameObject:
   m_ObjectHideFlags: 0
