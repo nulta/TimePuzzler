@@ -11,7 +11,7 @@ public class CalendarCancel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Action") || Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetButtonDown("Action") || Input.GetMouseButtonDown(0))
         {
             gameObject.SetActive(false);
         }
